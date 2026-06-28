@@ -39,25 +39,25 @@ img{max-width:100%;display:block}
   white-space:nowrap;
 }
 .btn:hover{transform:translateY(-3px)}
-.btn-primary{background:var(--blue);color:#fff;box-shadow:0 10px 24px rgba(13,139,240,.45)}
-.btn-primary:hover{background:var(--blue-dark);box-shadow:0 14px 30px rgba(13,139,240,.55)}
-.btn-dark{background:rgba(40,46,56,.85);color:#fff;backdrop-filter:blur(4px)}
-.btn-dark:hover{background:#2b313c}
+.btn-primary{background:var(--red);color:#fff;box-shadow:0 10px 24px rgba(225,29,42,.4)}
+.btn-primary:hover{background:var(--red-dark);box-shadow:0 14px 30px rgba(225,29,42,.55)}
+.btn-dark{background:#0D8BF0;color:#fff;box-shadow:0 10px 24px rgba(13,139,240,.35)}
+.btn-dark:hover{background:#0a6fc2;box-shadow:0 14px 30px rgba(13,139,240,.5)}
 .btn-red{background:var(--red);color:#fff;box-shadow:0 10px 24px rgba(225,29,42,.4)}
 .btn-red:hover{background:var(--red-dark);box-shadow:0 14px 30px rgba(225,29,42,.55)}
-.btn-whatsapp{background:var(--blue);color:#fff;box-shadow:0 8px 20px rgba(13,139,240,.4)}
-.btn-whatsapp:hover{background:var(--blue-dark)}
+.btn-whatsapp{background:var(--red);color:#fff;box-shadow:0 8px 20px rgba(225,29,42,.4)}
+.btn-whatsapp:hover{background:var(--red-dark)}
 .btn-block{width:100%}
 .btn-lg{padding:16px 38px;font-size:1.05rem}
 
 /* ===== Navbar ===== */
 .navbar{
   position:fixed;top:0;left:0;width:100%;z-index:100;
-  padding:16px 0;background:rgba(228,231,236,.55);
-  backdrop-filter:blur(12px);
-  transition:background .3s ease,box-shadow .3s ease,padding .3s ease;
+  padding:16px 0;background:#ffffff;
+  box-shadow:0 2px 16px rgba(0,0,0,.07);
+  transition:box-shadow .3s ease,padding .3s ease;
 }
-.navbar.scrolled{background:rgba(255,255,255,.92);box-shadow:0 6px 24px rgba(0,0,0,.08);padding:10px 0}
+.navbar.scrolled{box-shadow:0 6px 24px rgba(0,0,0,.11);padding:10px 0}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
 .logo{display:flex;align-items:center;gap:10px;color:var(--blue)}
 .logo-icon{color:var(--blue);display:flex}
