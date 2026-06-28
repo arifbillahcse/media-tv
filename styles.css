@@ -92,25 +92,36 @@ img{max-width:100%;display:block}
 .accent-line{background:linear-gradient(90deg,#fff,#9fd2ff);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 @keyframes riseIn{to{opacity:1;transform:translateY(0)}}
 .hero-sub{margin:22px auto 0;max-width:600px;font-size:1.08rem;color:#e7eef6;font-weight:400}
+.hero-cta{display:flex;gap:14px;justify-content:center;margin-top:30px}
 .hero-stats{display:flex;gap:46px;justify-content:center;margin-top:42px}
 .hstat{display:flex;flex-direction:column;align-items:center}
 .hstat .num{font-size:2.2rem;font-weight:800;color:#fff}
 .hstat small{font-size:.8rem;color:#bcd4ea;letter-spacing:1px;text-transform:uppercase}
 
-/* floaties */
-.floaties{position:absolute;inset:0;z-index:2;pointer-events:none}
-.floaty{position:absolute;font-size:2rem;filter:drop-shadow(0 6px 14px rgba(0,0,0,.4));opacity:.9;animation:float 7s ease-in-out infinite}
-.f1{top:18%;left:10%;animation-delay:0s}
-.f2{top:30%;left:84%;font-size:2.6rem;animation-delay:.8s}
-.f3{top:62%;left:14%;font-size:2.4rem;animation-delay:1.6s}
-.f4{top:72%;left:80%;animation-delay:.4s}
-.f5{top:14%;left:64%;animation-delay:2.2s}
-.f6{top:48%;left:6%;animation-delay:1.1s}
-.f7{top:78%;left:46%;font-size:2.3rem;animation-delay:1.9s}
-.f8{top:22%;left:40%;font-size:1.6rem;animation-delay:.6s}
-.f9{top:54%;left:90%;animation-delay:2.6s}
-.f10{top:84%;left:24%;animation-delay:1.3s}
-@keyframes float{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-26px) rotate(6deg)}}
+/* floaties — each icon travels from one fixed spot to another */
+.floaties{position:absolute;inset:0;z-index:2;pointer-events:none;overflow:hidden}
+.floaty{position:absolute;font-size:2rem;filter:drop-shadow(0 6px 20px rgba(0,0,0,.45))}
+.f1 {font-size:2.2rem;animation:travel1 13s ease-in-out infinite}
+.f2 {font-size:2.6rem;animation:travel2 16s ease-in-out infinite 1.2s}
+.f3 {font-size:2.4rem;animation:travel3 11s ease-in-out infinite 2.4s}
+.f4 {font-size:2rem; animation:travel4 14s ease-in-out infinite 0.6s}
+.f5 {font-size:2.1rem;animation:travel5 12s ease-in-out infinite 3.1s}
+.f6 {font-size:2rem; animation:travel6 15s ease-in-out infinite 1.8s}
+.f7 {font-size:2.3rem;animation:travel7 10s ease-in-out infinite 0.4s}
+.f8 {font-size:1.8rem;animation:travel8 17s ease-in-out infinite 2s}
+.f9 {font-size:2.2rem;animation:travel9 12s ease-in-out infinite 3.8s}
+.f10{font-size:2rem; animation:travel10 14s ease-in-out infinite 1s}
+/* Each keyframe: icon starts at point A, glides to point B, returns */
+@keyframes travel1 {0%,100%{top:8%; left:7%; opacity:.5}  50%{top:68%;left:80%;opacity:1}}
+@keyframes travel2 {0%,100%{top:18%;left:82%;opacity:.6}  50%{top:72%;left:10%;opacity:1}}
+@keyframes travel3 {0%,100%{top:72%;left:9%; opacity:.5}  50%{top:12%;left:72%;opacity:1}}
+@keyframes travel4 {0%,100%{top:78%;left:78%;opacity:.6}  50%{top:14%;left:18%;opacity:1}}
+@keyframes travel5 {0%,100%{top:8%; left:46%;opacity:.5}  50%{top:78%;left:36%;opacity:1}}
+@keyframes travel6 {0%,100%{top:44%;left:4%; opacity:.4}  50%{top:22%;left:88%;opacity:.9}}
+@keyframes travel7 {0%,100%{top:84%;left:42%;opacity:.55} 50%{top:6%; left:32%;opacity:1}}
+@keyframes travel8 {0%,100%{top:18%;left:34%;opacity:.45} 50%{top:74%;left:62%;opacity:.95}}
+@keyframes travel9 {0%,100%{top:52%;left:90%;opacity:.5}  50%{top:28%;left:4%; opacity:1}}
+@keyframes travel10{0%,100%{top:88%;left:20%;opacity:.5}  50%{top:16%;left:66%;opacity:1}}
 
 .scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:3;width:26px;height:42px;border:2px solid rgba(255,255,255,.7);border-radius:14px;display:flex;justify-content:center}
 .scroll-hint span{width:4px;height:8px;background:#fff;border-radius:3px;margin-top:7px;animation:scrollMove 1.6s infinite}
